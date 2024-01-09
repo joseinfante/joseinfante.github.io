@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+/* #content {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;} */
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+       }
+
+    body {  
+    background-color: #1B2223;
+    font-family: 'poppins', sans-serif;
+    font-size: medium;
+    color: #F4FEFD;
+    scroll-behavior: smooth;
+    } 
+
+a, a:hover, a:focus, a:active {
+        text-decoration: none;
+        color: inherit;}
+
+/* NAVIGATION BAR */
+#navigation-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #1B2223}
+
+#navigation-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1B2223;
+    position: relative;
+    /* margin-top: 12px;
+    margin-bottom: 12px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navigation-bar li {
+    float: left;
+    display: inline;
+    margin-top: 0px;
+    vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#navigation-bar a {
+    display: block;
+    color: #F4FEFD;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;}
+
+#navigation-bar li a:hover {
+    background-color: #0EF6CC;
+    color: #3A4F50;
+    transition: .5s ease-in-out;
+}
+
+#navigation-bar .social-icons {
+    float: right;
+    display: block;
+    text-align: center;
+}
+
+#intro {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15%;
+    min-height: 75vh;}
+
+#home {
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+    transition: all 0.5s;
+    -webkit-text-stroke: 4px #d6f4f4;
+    font-variation-settings: "wght" 900, "ital" 1;
+    font-size: 15rem;
+    text-align: center;
+    color: transparent;
+    font-family: 'popins', sans-serif;
+    text-shadow: 10px 10px 0px #0EF6CC, 
+                15px 15px 0px #e601c0,
+                20px 20px 0px #e9019a,
+                25px 25px 0px #f40468,
+                45px 45px 0px #482896;
+    cursor: pointer;
+}
+
+#home:hover {
+    -webkit-text-stroke: 3px #d6f4f4;
+    font-variation-settings: "wght" 100, "ital" 0;
+    text-shadow: none;
+}
+
+#about-me{
+    text-align: center;
+    font-size: 22px;
+    max-width: 40%;
+    text-align: justify;
+
+}
+
+#experience {
+    text-align: center;
+    font-size: 22px;
+    max-width: 40%;
+    text-align: justify;
+    padding-left: 15%;
+    /* min-height: 100vh; */
+}
+
+/* FOOTER */
+#footer {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.ending-credits {
+    font-family: 'popins', sans-serif;
+    color: #F4FEFD;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+/* e-mail button */
+.intro-contact {
+    text-align: center;
+    font-size: 22px;
+    color: #F4FEFD;
+}
+
+.email-me ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.email-me li {
+    float: center;
+    display: inline;
+    text-align: center;
+}
+
+/* Buttons */
+.email-me-button{
+    cursor: pointer;
+}
+.email-me {
+    background-color: #3A4F50; 
+    border: 2px solid #0EF6CC;
+    color: rgb(255 255 255); 
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.email-me:hover {
+    background-color: #0EF6CC;
+    color: #1B2223;
+    transition : .5s ease-in-out;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
