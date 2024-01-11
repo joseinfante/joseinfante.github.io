@@ -1,0 +1,38 @@
+/* Styles for Projects.js component */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-card {
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.project-description {
+    font-size: 14px;
+    color: #666666;
+}
+
+.project-link {
+    margin-top: 16px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
