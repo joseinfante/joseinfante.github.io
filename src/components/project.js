@@ -11,7 +11,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 const projects = {
   "Baldemort": {
     title: "Baldemort",
-    description: "2D Game made in Unity where you play as a wizard that has to defeat the evil wizard Baldemort. It includes a persidual generated map section to explore.",
+    description: "2D Game made in Unity where you play as a wizard that has to defeat the evil wizard Baldemort. It includes a procedurally generated map section to explore.",
     technologies: "Unity, C#, Git",
     image: "./assets/Baldemort.png",
     repoLink: "https://github.com/joseinfante/Baldemort"
