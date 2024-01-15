@@ -27,7 +27,7 @@ class Footer extends React.Component {
             <div class="ending-credits"> 
                 <div>Built and designed by Jose A. Infante. </div>
                 <div>All rights reserved. ©</div>
-                <Nav.Link href="angel.infante@angelinfante.com">
+                <Nav.Link href="mailto:angel.infante@angelinfante.com">
                   <EmailRoundedIcon style={{ fontSize: 20 }}></EmailRoundedIcon>
                 </Nav.Link>
                 <Nav.Link href="https://github.com/joseinfante" target="_blank">

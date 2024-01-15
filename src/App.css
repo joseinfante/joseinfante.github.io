@@ -203,29 +203,29 @@ a, a:hover, a:focus, a:active {
   /* Media query for screens smaller than 600px */
 @media only screen and (max-width: 600px) {
     #intro {
-      padding-left: 5%; /* Adjust the padding for smaller screens */
-      padding-top: 5%; /* Adjust the padding for smaller screens */
+      padding-left: 5%; 
+      padding-top: 5%;
     }
   
     #home {
-      font-size: 8rem; /* Adjust the font size for smaller screens */
+      font-size: 8rem;
     }
   
     #about-me,
     #experience {
-      max-width: 80%; /* Adjust the maximum width for smaller screens */
+      max-width: 80%; 
     }
   
     #navigation-bar {
-      padding: 0; /* Adjust the padding for smaller screens */
+      padding: 0; 
     }
   
     #navigation-bar a {
-      padding: 10px 12px; /* Adjust the padding for smaller screens */
+      padding: 10px 12px; 
     }
   
     .email-me {
-      font-size: 16px; /* Adjust the font size for smaller screens */
-      padding: 8px 16px; /* Adjust the padding for smaller screens */
+      font-size: 16px; 
+      padding: 8px 16px; 
     }
   }

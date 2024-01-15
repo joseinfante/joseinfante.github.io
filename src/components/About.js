@@ -36,12 +36,6 @@ class About extends React.Component {
                    </ul>
                 </button>
             </a>
-                <Nav.Link href="https://github.com/joseinfante" target="_blank">
-                  <GitHubIcon style={{ fontSize: 39}}></GitHubIcon>
-                </Nav.Link>
-                <Nav.Link href="https://www.linkedin.com/in/joseinfantejr/" target="_blank">
-                  <LinkedInIcon style={{ fontSize: 40 }}></LinkedInIcon>
-                </Nav.Link>
         </div>
         </FadeInSection>
       </div>

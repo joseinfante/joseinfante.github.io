@@ -1,0 +1,118 @@
+/* Contact.css */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+#contact-section {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.contact-description {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 32px;
+}
+
+/* Styles for the contact form container */
+.contact-form {
+    width: 60%;
+    margin: 20px 0;
+}
+
+/* Add styles for the contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align labels to the left */
+}
+
+label {
+    margin-top: 10px;
+    /* font-weight: bold; */
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3A4F50;
+    color: #F4FEFD;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2b3b3b;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #F4FEFD;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3A4F50;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 200px;
+}
+
+.contact-link:hover {
+    transform: translateY(-7px);
+    background-color: #2b3b3b;
+}
+
+.contact-icon {
+    font-size: 40px;
+    color: #F4FEFD;
+}
+
+.contact-link-text {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    #contact {
+        padding-left: unset;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-link {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* Responsive styles for the contact form container */
+    .contact-form {
+        width: 80%;
+    }
+}

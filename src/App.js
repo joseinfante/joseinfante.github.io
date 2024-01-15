@@ -5,6 +5,7 @@ import Home from './components/home';
 import About from './components/About';
 import Carousel from './components/project';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <About></About>
             </div>
             <Carousel></Carousel>
+            <Contact></Contact>
             <Footer></Footer>
     </div>
   );

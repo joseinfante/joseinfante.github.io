@@ -35,7 +35,7 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     beforeChange: (current, next) => setCurrentIndex(next),
   };
 
@@ -56,7 +56,7 @@ const Carousel = () => {
   return (
     <div id="projects">
     <FadeInSection>
-    <h1 Id="projects-section">./projects</h1>
+    <h1 Id="projects-section">./ projects</h1>
     <div className="carousel-container">
       <Slider {...settings}>
         {Object.values(projects).map((project, index) => (
