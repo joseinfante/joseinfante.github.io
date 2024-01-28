@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import "../styles/Contact.css"; // Import the CSS file for Contact.js
+import "../styles/Contact.css";
 
 class Contact extends React.Component {
  
@@ -16,7 +16,7 @@ class Contact extends React.Component {
                     <p>Feel free to contact me at any of the links below!</p>
                     {/* Contact Links */}
                     <div className="contact-links">
-                        <Nav.Link href="mailto:angel.infante@angelinfante.com" target="_blank" className="contact-link">
+                        <Nav.Link href="mailto:infantejose.97@gmail.com" target="_blank" className="contact-link">
                             <EmailRoundedIcon className="contact-icon" />
                             <span className="contact-link-text">Email</span>
                         </Nav.Link>
