@@ -2,26 +2,18 @@ import React from "react";
 import FadeInSection from "../components/FadeInSection";
 
 class Home extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-          expanded: true,
-          activeKey: "1"
-        };
-        this.handleSelect = this.handleSelect.bind(this);
-      }
-      handleSelect(eventKey) {
-        this.setState({
-          activeKey: eventKey
-        });
-      }
-
-      render() {
-        return (
-            <FadeInSection>
-            <h1 id="home">JOSE A. INFANTE</h1>
-            </FadeInSection>
-        );
-    }
+  render() {
+    return (
+      <div id="hero-section">
+        <FadeInSection>
+          <h1 id="home">JOSE<br />INFANTE</h1>
+          <p className="hero-subtitle">
+            <span>Full-Stack Developer</span> &amp; CS Graduate
+          </p>
+        </FadeInSection>
+      </div>
+    );
+  }
 }
+
 export default Home;

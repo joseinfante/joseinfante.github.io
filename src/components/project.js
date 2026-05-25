@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/carousel.css"; // Import the CSS file
 import FadeInSection from "./FadeInSection";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import LanguageIcon from "@material-ui/icons/Language";
 
 const projects = {
   "Baldemort": {
@@ -22,6 +23,13 @@ const projects = {
     technologies: "React.js, Bootstrap, Git, GitHub Pages",
     image: "./assets/Portfolio.png",
     repoLink: "https://github.com/joseinfante/joseinfante.github.io"
+  },
+  Everuna: {
+    title: "Everuna",
+    description: "A cloud-based digital signage platform that lets businesses manage screens remotely, build playlists, schedule content, and track performance — with an ad network for community venues in the Rio Grande Valley.",
+    technologies: "",
+    image: "./assets/Everuna.png",
+    websiteLink: "https://everuna.com"
   }
 };
 
@@ -49,14 +57,10 @@ const Carousel = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleGitHubClick = (link) => {
-    window.open(link, "_blank");
-  };
-
   return (
     <div id="projects">
     <FadeInSection>
-    <h1 Id="projects-section">./ projects</h1>
+    <h1>./projects</h1>
     <div className="carousel-container">
       <Slider {...settings}>
         {Object.values(projects).map((project, index) => (
@@ -65,12 +69,17 @@ const Carousel = () => {
               <h3 className="carousel-title">{project.title}</h3>
               <p className="carousel-description">{project.description}</p>
               <p className="carousel-technologies">{project.technologies}</p>
-              <GitHubIcon
-            className="github-button"
-            onClick={() => {
-              handleGitHubClick(project.repoLink);
-            }}
-          ></GitHubIcon>
+              {project.websiteLink ? (
+                <LanguageIcon
+                  className="github-button"
+                  onClick={() => window.open(project.websiteLink, "_blank")}
+                />
+              ) : (
+                <GitHubIcon
+                  className="github-button"
+                  onClick={() => window.open(project.repoLink, "_blank")}
+                />
+              )}
             </div>
             <img
               src={project.image}

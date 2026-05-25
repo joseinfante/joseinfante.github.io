@@ -12,9 +12,8 @@ class Contact extends React.Component {
         return (
             <div id="contact">
                 <FadeInSection>
-                    {/* <h1 id="contact-section">./ contact</h1> */}
-                    <p>Feel free to contact me at any of the links below!</p>
-                    {/* Contact Links */}
+                    <h2 className="contact-section-title">./contact</h2>
+                    <p>Feel free to reach out — I am always open to new opportunities and conversations.</p>
                     <div className="contact-links">
                         <Nav.Link href="mailto:infantejose.97@gmail.com" target="_blank" className="contact-link">
                             <EmailRoundedIcon className="contact-icon" />

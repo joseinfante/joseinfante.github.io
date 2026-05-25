@@ -1,118 +1,88 @@
-/* Contact.css */
-
+/* ─── Contact Section ─────────────────────────────── */
 #contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-#contact-section {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 16px;
+#contact p {
+  font-size: 1rem;
+  color: rgba(244, 254, 253, 0.55);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
 }
 
-.contact-description {
-    font-size: 16px;
-    color: #666666;
-    margin-bottom: 32px;
-}
-
-/* Styles for the contact form container */
-.contact-form {
-    width: 60%;
-    margin: 20px 0;
-}
-
-/* Add styles for the contact form */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align labels to the left */
-}
-
-label {
-    margin-top: 10px;
-    /* font-weight: bold; */
-}
-
-input,
-textarea {
-    width: 100%;
-    margin-top: 5px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #3A4F50;
-    color: #F4FEFD;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #2b3b3b;
+.contact-section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0EF6CC;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .contact-link {
-    text-decoration: none;
-    color: #F4FEFD;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #3A4F50;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.6rem 2.2rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(14, 246, 204, 0.14);
+  border-radius: 10px;
+  color: #F4FEFD !important;
+  text-decoration: none;
+  min-width: 130px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .contact-link:hover {
-    transform: translateY(-7px);
-    background-color: #2b3b3b;
+  background: rgba(14, 246, 204, 0.06);
+  border-color: rgba(14, 246, 204, 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(14, 246, 204, 0.08);
+  color: #0EF6CC !important;
+}
+
+.contact-link:hover .contact-icon {
+  color: #0EF6CC;
 }
 
 .contact-icon {
-    font-size: 40px;
-    color: #F4FEFD;
+  font-size: 1.9rem !important;
+  color: rgba(244, 254, 253, 0.7);
+  transition: color 0.3s ease;
 }
 
 .contact-link-text {
-    margin-top: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-@media only screen and (max-width: 600px) {
-    #contact {
-        padding-left: unset;
-    }
+@media (max-width: 768px) {
+  .contact-links {
+    gap: 0.85rem;
+    width: 100%;
+  }
 
-    .contact-links {
-        flex-direction: column;
-        align-items: center;
-    }
+  .contact-link {
+    min-width: calc(50% - 0.5rem);
+    padding: 1.3rem 1rem;
+    flex: 1;
+  }
+}
 
-    .contact-link {
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    /* Responsive styles for the contact form container */
-    .contact-form {
-        width: 80%;
-    }
+@media (max-width: 400px) {
+  .contact-link {
+    min-width: 100%;
+  }
 }

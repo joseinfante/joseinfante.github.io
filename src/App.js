@@ -13,9 +13,9 @@ function App() {
     <div>
         <NavBar></NavBar>
         <Home></Home>
-            <div id="intro">
+        <div id="intro">
             <About></About>
-            </div>
+        </div>
             <Carousel></Carousel>
             <Contact></Contact>
             <Footer></Footer>

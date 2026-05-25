@@ -1,37 +1,64 @@
-import React from "react";
-import { Container } from 'react-bootstrap';
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import BorderColorIcon from "@material-ui/icons/BorderColor";
-import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
+import React, { useState, useEffect } from "react";
+import "../styles/NavBar.css";
 
-class NavBar extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-          expanded: true,
-          activeKey: "1"
-        };
-        this.handleSelect = this.handleSelect.bind(this);
-      }
-      handleSelect(eventKey) {
-        this.setState({
-          activeKey: eventKey
-        });
-      }
-  render() {
-    return (
-    <div id="navigation-bar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-me">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            {/* <li><a href="#contact">Contact</a></li> */}
+const NavBar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const links = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about-me" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <>
+      <nav className={`site-nav${scrolled ? " nav-scrolled" : ""}`}>
+        <div className="nav-inner">
+          <a href="#home" className="nav-brand" onClick={() => setMenuOpen(false)}>
+            <span className="brand-bracket">&lt;</span>JI
+            <span className="brand-bracket">/&gt;</span>
+          </a>
+
+          <button
+            className={`nav-toggle${menuOpen ? " is-open" : ""}`}
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label="Toggle menu"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          <ul className={`nav-links${menuOpen ? " is-open" : ""}`}>
+            {links.map((link, i) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="nav-link"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <span className="link-num">0{i + 1}.</span>
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
-    </div>
-    );
-    }
-}
+        </div>
+      </nav>
+
+      {menuOpen && (
+        <div className="nav-backdrop" onClick={() => setMenuOpen(false)} />
+      )}
+    </>
+  );
+};
+
 export default NavBar;

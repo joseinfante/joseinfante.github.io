@@ -1,231 +1,268 @@
-/* #content {
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: hidden;} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700;900&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap');
+/* ─── Base ──────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
 
-    html {
-        scroll-behavior: smooth;
-       }
-
-    body {  
-    background-color: #1B2223;
-    font-family: 'poppins', sans-serif;
-    font-size: medium;
-    color: #F4FEFD;
-    scroll-behavior: smooth;
-    } 
+body {
+  background-color: #1B2223;
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  color: #F4FEFD;
+  margin: 0;
+  padding: 0;
+}
 
 a, a:hover, a:focus, a:active {
-        text-decoration: none;
-        color: inherit;}
+  text-decoration: none;
+  color: inherit;
+}
 
-/* Animation */
+/* ─── Shared centered container ─────────────────────── */
+/* Re-used by hero, about, projects, contact, footer     */
+.section-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  box-sizing: border-box;
+}
 
+/* ─── Scroll Animations ─────────────────────────────── */
 .fade-in-section {
-    opacity: 0;
-    transform: translateY(10vh);
-    visibility: hidden;
-    transition: opacity 0.6s ease-out, transform 1s ease-out;
-    will-change: opacity, visibility;
-  }
-  .fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-  }
-
-/* NAVIGATION BAR */
-
-#navigation-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0px;
-    overflow: hidden;
-    background-color: #1B2223;
-    z-index: 1000;
+  opacity: 0;
+  transform: translateY(8vh);
+  visibility: hidden;
+  transition: opacity 0.7s ease-out, transform 1s ease-out;
+  will-change: opacity, visibility;
 }
 
-#navigation-bar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #1B2223;
-    /* position: relative; */
-    /* margin-top: 12px;
-    margin-bottom: 12px; */
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
-#navigation-bar li {
-    float: left;
-    display: inline;
-    margin-top: 0px;
-    vertical-align: middle;
-}
-
-#navigation-bar a {
-    display: block;
-    color: #F4FEFD;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;}
-
-#navigation-bar li a:hover {
-    background-color: #0EF6CC;
-    color: #3A4F50;
-    transition: .5s ease-in-out;
-}
-
-#navigation-bar .social-icons {
-    float: right;
-    display: block;
-    text-align: center;
-}
-
-#intro {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 15%;
-    padding-top: 10%;
-    min-height: 75vh;
+/* ─── Hero Section ──────────────────────────────────── */
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
 }
 
 #home {
-    position: relative;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    transition: all 0.5s;
-    -webkit-text-stroke: 4px #d6f4f4;
-    font-variation-settings: "wght" 900, "ital" 1;
-    font-size: 15rem;
-    text-align: center;
-    color: transparent;
-    font-family: 'popins', sans-serif;
-    text-shadow: 10px 10px 0px #0EF6CC, 
-                15px 15px 0px #e601c0,
-                20px 20px 0px #e9019a,
-                25px 25px 0px #f40468,
-                45px 45px 0px #482896;
-    cursor: pointer;
+  position: relative;
+  -webkit-text-stroke: 3px #d6f4f4;
+  font-weight: 900;
+  font-size: 12rem;
+  line-height: 0.95;
+  color: transparent;
+  font-family: 'Poppins', sans-serif;
+  text-shadow:
+    8px 8px 0px #0EF6CC,
+    13px 13px 0px #e601c0,
+    18px 18px 0px #e9019a,
+    23px 23px 0px #f40468,
+    38px 38px 0px #482896;
+  cursor: pointer;
+  margin: 0;
+  transition: text-shadow 0.45s ease, -webkit-text-stroke 0.45s ease;
 }
 
 #home:hover {
-    -webkit-text-stroke: 3px #d6f4f4;
-    font-variation-settings: "wght" 100, "ital" 0;
-    text-shadow: none;
+  -webkit-text-stroke: 2px rgba(214, 244, 244, 0.6);
+  text-shadow: none;
 }
 
-#about-me{
-    text-align: center;
-    font-size: 22px;
-    max-width: 40%;
-    text-align: justify;
-
+.hero-subtitle {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(244, 254, 253, 0.45);
 }
 
-#experience {
-    text-align: center;
-    font-size: 22px;
-    max-width: 40%;
-    text-align: justify;
-    padding-left: 15%;
-    /* min-height: 100vh; */
+.hero-subtitle span {
+  color: #0EF6CC;
 }
 
-/* FOOTER */
+/* ─── About Wrapper ─────────────────────────────────── */
+#intro {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 7rem 2.5rem 4rem;
+  box-sizing: border-box;
+}
+
+/* ─── About ─────────────────────────────────────────── */
+#about-me {
+  font-size: 1.05rem;
+  max-width: 600px;
+  line-height: 1.85;
+}
+
+#about-me h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.4rem;
+  line-height: 1;
+}
+
+/* ─── Email Button ──────────────────────────────────── */
+.email-me {
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 1.5px solid #0EF6CC;
+  color: #0EF6CC;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+.email-me:hover {
+  background: rgba(14, 246, 204, 0.08);
+  box-shadow: 0 0 24px rgba(14, 246, 204, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ─── Projects Section ──────────────────────────────── */
+#projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+  box-sizing: border-box;
+}
+
+/* ─── Contact Section ───────────────────────────────── */
+#contact {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+  box-sizing: border-box;
+}
+
+/* ─── Footer ────────────────────────────────────────── */
 #footer {
-    display: flex;
-    align-items: center;
-    padding-top: 100px;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0 2rem;
+  border-top: 1px solid rgba(14, 246, 204, 0.08);
 }
 
 .ending-credits {
-    font-family: 'popins', sans-serif;
-    color: #F4FEFD;
-    text-align: center;
-    width: 100%;
-    font-size: 12px;
-    padding-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(244, 254, 253, 0.35);
+  text-align: center;
+  width: 100%;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  padding-bottom: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  box-sizing: border-box;
 }
 
-/* e-mail button */
-.intro-contact {
-    text-align: center;
-    font-size: 22px;
-    color: #F4FEFD;
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
 }
 
-.email-me ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-.email-me li {
-    float: center;
-    display: inline;
-    text-align: center;
+.footer-icons a {
+  color: rgba(244, 254, 253, 0.35);
+  transition: color 0.25s ease;
+  display: flex;
 }
 
-/* Buttons */
-.email-me-button{
-    cursor: pointer;
+.footer-icons a:hover {
+  color: #0EF6CC;
 }
-.email-me {
-    background-color: #3A4F50; 
-    border: 2px solid #0EF6CC;
-    color: rgb(255 255 255); 
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'poppins', sans-serif;
-    font-size: 20px;
-    margin: 2px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 12px;
+
+/* ─── Responsive: Tablet ────────────────────────────── */
+@media only screen and (max-width: 1024px) {
+  #home {
+    font-size: 9rem;
   }
-.email-me:hover {
-    background-color: #0EF6CC;
-    color: #1B2223;
-    transition : .5s ease-in-out;
+}
+
+/* ─── Responsive: Mobile ────────────────────────────── */
+@media only screen and (max-width: 768px) {
+  #hero-section,
+  #intro,
+  #projects,
+  #contact {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
-  /* Media query for screens smaller than 600px */
-@media only screen and (max-width: 600px) {
-    #intro {
-      padding-left: 5%; 
-      padding-top: 5%;
-    }
-  
-    #home {
-      font-size: 8rem;
-    }
-  
-    #about-me,
-    #experience {
-      max-width: 80%; 
-    }
-  
-    #navigation-bar {
-      padding: 0; 
-    }
-  
-    #navigation-bar a {
-      padding: 10px 12px; 
-    }
-  
-    .email-me {
-      font-size: 16px; 
-      padding: 8px 16px; 
-    }
+  #hero-section {
+    padding-top: 0;
+    padding-bottom: 0;
   }
+
+  #intro {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  #projects,
+  #contact {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  #home {
+    font-size: 5.5rem;
+    text-shadow:
+      5px 5px 0px #0EF6CC,
+      9px 9px 0px #e601c0,
+      12px 12px 0px #e9019a,
+      15px 15px 0px #f40468,
+      23px 23px 0px #482896;
+  }
+
+  .hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+
+  #about-me h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* ─── Responsive: Small Mobile ──────────────────────── */
+@media only screen and (max-width: 480px) {
+  #home {
+    font-size: 3.8rem;
+    text-shadow:
+      3px 3px 0px #0EF6CC,
+      6px 6px 0px #e601c0,
+      9px 9px 0px #e9019a,
+      11px 11px 0px #f40468,
+      16px 16px 0px #482896;
+  }
+
+  #about-me h1 {
+    font-size: 2.2rem;
+  }
+}
